@@ -1,0 +1,20 @@
+# 数据集和预处理文件
+cropped_cells/
+Dataset/
+all_images.pt
+all_labels.pt
+
+# 模型权重
+best_model.pth
+*.pth
+
+# 生成图片
+training_curves.png
+confusion_matrix.png
+*.png
+*.jpg
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
