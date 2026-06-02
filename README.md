@@ -21,14 +21,14 @@
 pip install -r requirements.txt
 核心依赖：torch, torchvision, numpy, tqdm, matplotlib, scikit-learn, seaborn
 
-数据准备（本地运行）
+## 数据准备（本地运行）
 将原始图片按类别放在 D:\12blood\cropped_cells 下
 
 运行 preprocess.py → 生成 Dataset/ 中的 22105 个 .pt 文件
 
 运行 merge_data.py → 生成 all_images.pt 和 all_labels.pt
 
-训练与评估
+## 训练与评估
 bash
 python train_multiclass.py
 使用 ImageNet 预训练的 MobileNetV3-Small
@@ -39,7 +39,7 @@ python train_multiclass.py
 
 最佳模型保存为 best_model.pth
 
-实验结果（4 Epochs）
+## 实验结果（4 Epochs）
 Epoch	Train Loss	Train Acc	Val Acc
 1	1.0745	63.92%	47.26%
 2	0.5626	78.02%	72.00%
@@ -47,7 +47,7 @@ Epoch	Train Loss	Train Acc	Val Acc
 4	0.3000	85.52%	80.37%
 最终测试集准确率：82.34%
 
-分类报告（部分关键类别）
+## 分类报告（部分关键类别）
 类别	样本数	精确率	召回率	F1-score
 0	1879	0.82	0.81	0.82
 1	210	0.64	0.87	0.74
@@ -55,7 +55,7 @@ Epoch	Train Loss	Train Acc	Val Acc
 4	318	1.00	1.00	1.00
 10 (极少类)	101	0.59	0.78	0.67
 加权平均	6632	0.84	0.82	0.83
-项目亮点
+## 项目亮点
 混合精度训练：加速训练并降低显存
 
 类别平衡损失：有效缓解 1:40 的不均衡
@@ -64,7 +64,7 @@ Epoch	Train Loss	Train Acc	Val Acc
 
 轻量模型：MobileNetV3-Small 仅 153 万参数，推理快
 
-作者
+## 作者
 姓名：2311050125贾悦冬
 
 用途：课程设计
